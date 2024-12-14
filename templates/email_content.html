@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theft Alert System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #2980b9, #6dd5fa, #ffffff);
+            background-size: 400% 400%;
+            animation: gradientBG 6s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 15px;
+            background: #fff;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            max-width: 450px;
+            width: 90%;
+        }
+
+        .container .icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+
+        .icon.safe {
+            color: #28a745;
+        }
+
+        .icon.alert {
+            color: #dc3545;
+        }
+
+        .container header {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .container p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .btns {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .btns button {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 500;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .btns .safe-btn {
+            background: #28a745;
+            color: #fff;
+        }
+
+        .btns .safe-btn:hover {
+            background: #218838;
+        }
+
+        .btns .alert-btn {
+            background: #dc3545;
+            color: #fff;
+        }
+
+        .btns .alert-btn:hover {
+            background: #c82333;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="alert-container" class="status-container">
+            <div class="icon alert">
+                <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <header>Cảnh báo!</header>
+            <p>Phát hiện trộm! Vui lòng kiểm tra ngay. Chuyển đến trang web để xác nhận bằng nút dưới đây.</p>
+            <div class="btns">
+                <a href="https://btl-iot.onrender.com/theft">
+                    <button class="alert-btn" id="confirm-button">Xác nhận</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
